@@ -1,0 +1,216 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "UnitRegistry",
+        "importPath": "pint",
+        "description": "pint",
+        "isExtraImport": true,
+        "detail": "pint",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "get_currency_conversion",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_currency_conversion(from_currency, to_currency, amount):\n    try:\n        api_url = f\"https://api.exchangerate-api.com/v4/latest/{from_currency}\"\n        response = requests.get(api_url)\n        data = response.json()\n        rate = data[\"rates\"].get(to_currency, None)\n        if rate:\n            return amount * rate\n        else:\n            return \"Currency not supported\"",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "save_conversion",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def save_conversion(history, category, value, from_unit, to_unit, result):\n    history.append(f\"{category}:\\n{value} {from_unit} = {result} {to_unit}\")\n    if len(history) > 10:\n        history.pop(0)  # Keep only the last 10 conversions\n    st.session_state[\"history\"] = history\n# Function to display unit definitions\ndef show_unit_definitions():\n    st.sidebar.subheader(\"Unit Definitions\")\n    st.sidebar.text(\"Meter: SI unit of length\")\n    st.sidebar.text(\"Kilogram: SI unit of mass\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "show_unit_definitions",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def show_unit_definitions():\n    st.sidebar.subheader(\"Unit Definitions\")\n    st.sidebar.text(\"Meter: SI unit of length\")\n    st.sidebar.text(\"Kilogram: SI unit of mass\")\n    st.sidebar.text(\"Joule: SI unit of energy\")\n    st.sidebar.text(\"Kelvin: SI unit of temperature\")\n    st.sidebar.text(\"Second: SI unit of time\")\n    st.sidebar.text(\"Pascal: SI unit of pressure\")\n    st.sidebar.text(\"Celsius: SI unit of temperature\")\ndef convert_units(category, value, from_unit, to_unit):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "convert_units",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def convert_units(category, value, from_unit, to_unit):\n    try:\n        result = (value * ureg(from_unit)).to(to_unit)\n        return result.magnitude\n    except Exception as e:\n        return f\"Error: {e}\"\ndef main():\n    st.set_page_config(page_title=\"📃Umar's Unit Converter\", layout=\"wide\")\n    history = st.session_state.get(\"history\", [])\n    st.title(\"📃Umar's Unit Converter\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def main():\n    st.set_page_config(page_title=\"📃Umar's Unit Converter\", layout=\"wide\")\n    history = st.session_state.get(\"history\", [])\n    st.title(\"📃Umar's Unit Converter\")\n    categories = {\n        \"Currency\" : [\"PKR\",\"USD\", \"EUR\", \"GBP\", \"JPY\", \"BTC\", \"ETH\", \"XRP\", \"LTC\", \"DOGE\", \"SOL\", \"BTC\",],\n        \"Length\": [\"meter\", \"kilometer\", \"mile\", \"yard\", \"centimeter\" , \"millimeter\",\n                    \"nautical_mile\", \"nanometer\", \"micrometer\" ,\"foot\", \"inch\"],\n        \"Area\": [\"square meter\", \"square kilometer\", \"square mile\", \"square_yard\", \"square_foot\",\"square_inch\",\n                 \"hectare\",\"acre\"],",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "ureg",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "ureg = UnitRegistry()\n# Function to fetch real-time exchange rates\ndef get_currency_conversion(from_currency, to_currency, amount):\n    try:\n        api_url = f\"https://api.exchangerate-api.com/v4/latest/{from_currency}\"\n        response = requests.get(api_url)\n        data = response.json()\n        rate = data[\"rates\"].get(to_currency, None)\n        if rate:\n            return amount * rate",
+        "detail": "app",
+        "documentation": {}
+    }
+]
